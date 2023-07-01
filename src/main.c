@@ -120,7 +120,6 @@ void	ft_arg_check(int argc, char **argv, t_vars *vars)
 	{
 		ft_fractal_init(argv[1], vars);
 		vars->fractal = ft_julia;
-		vars->c = ft_complex_create(ft_atof(argv[2]), ft_atof(argv[3]));
 	}
 }
 
@@ -129,7 +128,10 @@ int	main(int argc, char **argv)
 	t_vars	vars;
 
 	ft_arg_check(argc, argv, &vars);
+	ft_fractal_init(argv[1], &vars);
 	ft_vars_init(&vars);
+	if (vars.fractal == ft_julia && argc == 4)
+		vars.c = ft_complex_create(ft_atof(argv[2]), ft_atof(argv[3]));
 	ft_fractal_defaults(&vars);
 	ft_fractal(vars.fractal, &vars);
 	mlx_mouse_hook(vars.w_ptr, ft_mlx_mouse_hook, &vars);
