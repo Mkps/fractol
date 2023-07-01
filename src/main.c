@@ -70,28 +70,29 @@ void	ft_fractal_defaults(t_vars *vars)
 
 void	ft_fractal_init(char *fractal, t_vars *vars)
 {
-	if (!ft_strncmp(fractal, "Mandelbrot", ft_strlen("Mandelbrot")))
+	if (!ft_strncmp(fractal, "Mandelbrot", ft_strlen("Mandelbrot"))
+		&& ft_strlen("Mandelbrot") == ft_strlen(fractal))
 		vars->fractal = ft_mandelbrot;
-	else if (!ft_strncmp(fractal, "Julia", ft_strlen("Julia")))
+	else if (!ft_strncmp(fractal, "Julia", ft_strlen("Julia"))
+		&& ft_strlen("Julia") == ft_strlen(fractal))
 	{
 		vars->fractal = ft_julia;
 		vars->c = ft_complex_create(-0.77146, -0.10119);
 	}
-	else if (!ft_strncmp(fractal, "Power", ft_strlen("Power")))
+	else if (!ft_strncmp(fractal, "Power", ft_strlen("Power"))
+		&& ft_strlen("Power") == ft_strlen(fractal))
 		vars->fractal = ft_power;
-	else if (!ft_strncmp(fractal, "Newton", ft_strlen("Newton")))
+	else if (!ft_strncmp(fractal, "Newton", ft_strlen("Newton"))
+		&& ft_strlen("Newton") == ft_strlen(fractal))
 		vars->fractal = ft_newton;
-	else if (!ft_strncmp(fractal, "Nova", ft_strlen("Nova")))
+	else if (!ft_strncmp(fractal, "Nova", ft_strlen("Nova"))
+		&& ft_strlen("Nova") == ft_strlen(fractal))
 		vars->fractal = ft_nova;
-	else if (!ft_strncmp(fractal, "BurningShip", ft_strlen("BurningShip")))
+	else if (!ft_strncmp(fractal, "BurningShip", ft_strlen("BurningShip"))
+		&& ft_strlen("BurningShip") == ft_strlen(fractal))
 		vars->fractal = ft_burning_ship;
 	else
-	{
-		ft_putendl_fd("Invalid fractal name...", 2);
-		ft_putstr_fd("Available fractals [Mandelbrot | Julia | Nova | ", 2);
-		ft_putstr_fd("Newton | Power | BurningShip]\n", 2);
-		exit(0);
-	}
+		ft_fractal_error();
 }
 
 void	ft_arg_check(int argc, char **argv, t_vars *vars)

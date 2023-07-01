@@ -12,6 +12,14 @@
 
 #include "../includes/mlx_lp.h"
 
+void	ft_fractal_error(void)
+{
+	ft_putendl_fd("Invalid fractal name...", 2);
+	ft_putstr_fd("Available fractals [Mandelbrot | Julia | Nova | ", 2);
+	ft_putstr_fd("Newton | Power | BurningShip]\n", 2);
+	exit(0);
+}
+
 void	ft_menu_print(t_vars *vars, int color)
 {
 	int	x;

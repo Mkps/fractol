@@ -118,6 +118,7 @@ int			color_dn(int c1, int c2, double s);
 int			ft_color_int(int a, int r, int g, int b);
 void		ft_mlx_exit(t_vars *vars);
 void		ft_fractal_picker(int keycode, t_vars *vars);
+void		ft_fractal_error(void);
 void		ft_key_movement(int keycode, t_vars *vars);
 void		ft_window_controls(int keycode, t_vars *vars);
 void		ft_pos_zoom(int x, int y, t_vars *vars);
