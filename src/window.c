@@ -53,16 +53,16 @@ void	ft_key_movement(int key, t_vars *vars)
 	if (offset < 0.000000001)
 		offset = 0.000000001;
 	if (key == 'd' || key == 'D'
-			|| key == 65363)
+		|| key == 65363)
 		vars->offset_x += offset;
 	else if (key == 'a' || key == 'A'
-			|| key == 65361)
+		|| key == 65361)
 		vars->offset_x -= offset;
 	else if (key == 'w' || key == 'W'
-			|| key == 65362)
+		|| key == 65362)
 		vars->offset_y -= offset;
 	else if (key == 's' || key == 'S'
-			|| key == 65364)
+		|| key == 65364)
 		vars->offset_y += offset;
 	else if (key == 'x' || key == 'X')
 		vars->zoom *= 0.5;
