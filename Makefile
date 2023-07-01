@@ -25,7 +25,7 @@ OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJ_DIR)/%.o)
 LIB = -lft -lmlx -lXext -lX11 -lm
 CC = gcc
 
-CFLAGS = -O3 -Wall -Wextra -Werror -I$(INCDIR)
+CFLAGS = -Wall -Wextra -Werror -I$(INCDIR)
 
 all: $(NAME)
 

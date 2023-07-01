@@ -20,6 +20,7 @@ int	ft_mlx_destroy_hook(t_vars *vars)
 
 int	ft_mlx_key_hook(int keycode, t_vars *vars)
 {
+	printf("keycode %i = \n", keycode);
 	if (keycode == 65307 || keycode == 27)
 		ft_mlx_exit(vars);
 	if (keycode >= 1 && keycode <= '6')
