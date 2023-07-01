@@ -32,6 +32,7 @@ void	ft_vars_init(t_vars *vars)
 	else
 		vars->offset_x = 0.0;
 	vars->offset_y = 0.0;
+	vars->c = ft_complex_create(0, 0);
 	vars->resolution = ((float)vars->w_data.height / vars->w_data.width);
 	if (vars->w_data.width >= vars->w_data.height)
 		vars->resolution = ((double)vars->w_data.height / vars->w_data.width);
