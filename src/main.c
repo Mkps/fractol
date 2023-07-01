@@ -27,12 +27,12 @@ void	ft_vars_init(t_vars *vars)
 		ft_mlx_exit(vars);
 	}
 	init_img(vars);
-	if (vars->fractal == ft_nova)
-		vars->offset_x = -1.0;
+	if (vars->fractal == ft_julia)
+		vars->c = ft_complex_create(0.18, -0.566667);
 	else
-		vars->offset_x = 0.0;
+		vars->c = ft_complex_create(0, 0);
+	vars->offset_x = 0.0;
 	vars->offset_y = 0.0;
-	vars->c = ft_complex_create(0, 0);
 	vars->resolution = ((float)vars->w_data.height / vars->w_data.width);
 	if (vars->w_data.width >= vars->w_data.height)
 		vars->resolution = ((double)vars->w_data.height / vars->w_data.width);
